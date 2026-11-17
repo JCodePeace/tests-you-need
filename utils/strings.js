@@ -12,3 +12,9 @@ function slugify(str) {
 }
 
 module.exports = { capitalize, slugify };
+
+function truncate(str, len = 20) {
+  return str.length > len ? str.slice(0, len) + "..." : str;
+}
+
+module.exports.truncate = truncate;
